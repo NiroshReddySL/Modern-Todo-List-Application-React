@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 223 14% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 223 14% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 14% 18%;
+    --primary: 227 85% 34%;
+    --primary-foreground: 220 33% 98%;
+    --secondary: 226 84% 44%;
+    --secondary-foreground: 220 33% 98%;
+    --muted: 226 84% 93%;
+    --muted-foreground: 223 6% 44%;
+    --accent: 226 84% 93%;
+    --accent-foreground: 223 14% 18%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 226 84% 93%;
+    --input: 226 84% 93%;
+    --ring: 227 85% 34%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 223 14% 18%;
+    --foreground: 220 33% 98%;
+    --card: 223 14% 18%;
+    --card-foreground: 220 33% 98%;
+    --popover: 223 14% 18%;
+    --popover-foreground: 220 33% 98%;
+    --primary: 227 85% 34%;
+    --primary-foreground: 220 33% 98%;
+    --secondary: 226 84% 44%;
+    --secondary-foreground: 220 33% 98%;
+    --muted: 223 6% 44%;
+    --muted-foreground: 226 84% 93%;
+    --accent: 223 6% 44%;
+    --accent-foreground: 220 33% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 223 6% 44%;
+    --input: 223 6% 44%;
+    --ring: 227 85% 34%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.glass {
+  background: rgba(225, 236, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(128, 158, 252, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(1, 41, 172, 0.05),
+              0 2px 4px -1px rgba(1, 41, 172, 0.03);
+}
+
+.dark .glass {
+  background: rgba(12, 24, 212, 0.05);
+  border: 1px solid rgba(128, 158, 252, 0.1);
+}
